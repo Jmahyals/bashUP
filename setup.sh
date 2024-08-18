@@ -14,7 +14,7 @@ fi
 
 # Reemplazar ~/.bashrc con el bashrc del repositorio
 echo "Reemplazando ~/.bashrc con el bashrc del repositorio..."
-mv "$REPO_DIR/bashrc" ~/.bashrc
+cp -f "$REPO_DIR/bashrc" ~/.bashrc
 
 # Verificar si la carpeta myscript existe
 if [ -d "$MYSCRIPT_DIR" ]; then
