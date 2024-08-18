@@ -12,18 +12,6 @@ else
   exit 1
 fi
 
-# Eliminar el ~/.bashrc original
-if [ -f "$HOME/.bashrc" ]; then
-  echo "Eliminando el archivo ~/.bashrc original..."
-  rm "$HOME/.bashrc"
-else
-  echo "No se encontró el archivo ~/.bashrc original. Procediendo a copiar el nuevo archivo."
-fi
-
-# Copiar el bashrc del repositorio al directorio raíz
-echo "Copiando el archivo bashrc personalizado al directorio raíz..."
-cp "$REPO_DIR/bashrc" "$HOME/.bashrc"
-
 # Verificar si la carpeta myscript existe
 if [ -d "$MYSCRIPT_DIR" ]; then
   # Otorgar permisos de ejecución a todos los archivos shell en la carpeta myscript
@@ -36,5 +24,3 @@ fi
 # Instalar fzf, lsd y ranger
 echo "Instalando fzf, lsd y ranger..."
 pkg install -y fzf lsd ranger
-
-echo "Instalación completada. Reinicia tu terminal para aplicar los cambios."
