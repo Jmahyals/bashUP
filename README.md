@@ -2,6 +2,7 @@
 
 **BashUP** es una modificación del archivo `~/.bashrc`, en el cual se agregan comandos personalizados para mejorar tu experiencia en la terminal de **Termux**. Estos comandos están diseñados para facilitar la navegación y gestión de archivos y directorios, así como para optimizar el uso de herramientas comunes.
 
+<img src="image/uno.jpg" width="300">
 ### Comandos personalizados incluidos:
 
 1. **`cdl`** ➩ Lista los archivos del directorio actual.
