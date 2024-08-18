@@ -17,19 +17,29 @@
 Para instalar **BashUP**, sigue estos pasos:
 
 1. Clona el repositorio:
-    ```bash
+
+    ```
     git clone https://github.com/Jmahyals/bashUP
     ```
-2. Navega al directorio del proyecto:
-    ```bash
+3. Navega al directorio del proyecto:
+
+    ```
     cd bashUP
     ```
-3. Ejecuta el script de instalación:
-    ```bash
+4. Ejecuta el script de instalación:
+
+    ```
     bash setup.sh
     ```
-4. Aplica los cambios recargando el archivo `~/.bashrc`:
-    ```bash
+5. Mueve el bash personalizado:
+ 
+   ```
+   mv .bashrc ~/
+   ```
+   
+7. Aplica los cambios recargando el archivo 
+
+    ```
     source ~/.bashrc
     ```
 
