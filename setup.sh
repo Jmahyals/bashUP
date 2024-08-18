@@ -12,9 +12,17 @@ else
   exit 1
 fi
 
-# Reemplazar ~/.bashrc con el bashrc del repositorio
-echo "Reemplazando ~/.bashrc con el bashrc del repositorio..."
-cp -f "$REPO_DIR/bashrc" ~/.bashrc
+# Eliminar el ~/.bashrc original
+if [ -f "$HOME/.bashrc" ]; then
+  echo "Eliminando el archivo ~/.bashrc original..."
+  rm "$HOME/.bashrc"
+else
+  echo "No se encontró el archivo ~/.bashrc original. Procediendo a copiar el nuevo archivo."
+fi
+
+# Copiar el bashrc del repositorio al directorio raíz
+echo "Copiando el archivo bashrc personalizado al directorio raíz..."
+cp "$REPO_DIR/bashrc" "$HOME/.bashrc"
 
 # Verificar si la carpeta myscript existe
 if [ -d "$MYSCRIPT_DIR" ]; then
